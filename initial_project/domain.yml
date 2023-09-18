@@ -1,0 +1,345 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - busqueda_genero_libro
+  - dar_todos_los_libros
+  - saludo_con_nombre
+  - preguntar_sinopsis
+  - preguntar_autor
+  - preguntar_cant_paginas
+  - preguntar_precio
+  - preguntar_libro_por_nombre
+  - preguntar_posicion
+
+actions:
+  - listar_por_genero
+  - ver_si_existe_el_libro
+  - imprimir_todos_los_libros
+  - buscar_autor_libro
+  - dar_la_sinopsis_del_libro
+  - dar_cant_paginas_libro
+  - dar_precio_del_libro
+  - pregunta_la_posicion
+
+
+
+lookup_tables:
+  nombre_libro:
+    - El senior de los anillos
+    - Dracula
+    - El Hobbit
+    - El silencio de los corderos
+    - It
+    - Harry Potter y la piedra filosofal
+    - El codigo Da Vinci
+    - Los pilares de la Tierra
+    - Orgullo y prejuicio
+    - El resplandor
+    - "Las cronicas de Narnia: El leon, la bruja y el armario"
+    - "Sherlock Holmes: Aventuras"
+    - La sombra del viento
+    - En llamas
+    - Orgullo y prejuicio
+    - Los miserables
+    - Don Quijote de la Mancha
+    - Crimen y castigo
+    - Las aventuras de Huckleberry Finn
+    - La riqueza de las naciones
+    - El arte de amar
+    - La cocina al desnudo
+    - La Biblia
+    - Hojarasca
+  genero:
+    - Ficcion
+    - Ciencia
+    - ciencia ficcion
+    - Fantasia
+    - Historia
+    - Suspenso
+    - Terror
+    - Romance
+    - Aventura
+    - Poesia
+    - Cuento
+    - Ensayo
+    - Drama
+    - Comedia
+    - Misterio
+    - Politica
+    - Filosofia    
+    - Viajes
+    - Mitologia
+    - Magia
+    - Crecimiento
+    - Autoayuda
+    - Biografia
+    - Diario
+    - Teatro
+    - Comics
+    - Animales
+    - Negocios
+    - Educacion
+    - Meditacion
+    - Espiritualidad
+    - Religion
+    - Feminismo
+    - Psicologia
+    - Artes
+    - Fotografia
+    - Arquitectura
+    - Deporte
+    - Cocina
+    - Manualidades
+    - Naturaleza
+    - Misterio
+    - Tecnologia
+    - Suspenso
+    - Thriller psicologico
+    - Policiaca
+    - Literatura clasica
+    - Literatura infantil
+    - Poesia
+    - Ciencia y tecnologia
+    - Economia
+    - Sociologia
+    - Antropologia
+    - Critica literaria
+    - Periodismo
+    - Guerra
+    - Espionaje
+    - Conspiraciones
+    - Aprendizaje
+    - Terror psicologico
+    - Terror sobrenatural
+    - Terror splatter
+    - Humor
+    - Detectives
+    - Superheroes
+    - sobrenatural
+  nombre:
+    - Juan
+    - Maria
+    - Carlos
+    - Laura
+    - Alejandro
+    - Ana
+    - Jorge
+    - Patricia
+    - Roberto
+    - Gabriela
+    - Fernando
+    - Silvia
+    - Manuel
+    - Natalia
+    - Oscar
+    - Cecilia
+    - Luis
+    - Carolina
+    - Sergio
+    - Marina
+    - Daniel
+    - Victoria
+    - Javier
+    - Paula
+    - Eduardo
+    - Veronica
+    - Ramon
+    - Adriana
+    - Pablo
+    - Valeria
+    - Hector
+    - Andrea
+    - Martin
+    - Lorena
+    - Ignacio
+    - Rosario
+    - Marcelo
+    - Guadalupe
+    - Virginia
+    - Ariel
+    - Mercedes
+    - Miguel
+    - Florencia
+    - Gonzalo
+    - Romina
+    - Matias
+    - Antonela
+    - Guillermo
+    - Emilio
+    - Agustina
+    - Ricardo
+    - Celeste
+    - Diego
+    - Pedro
+    - Brenda
+    - Federico
+    - Beatriz
+    - Julian
+    - Mariana
+    - Leandro
+    - Rafael
+    - Lourdes
+    - Facundo
+    - Ailen
+    - Ernesto
+    - Daiana
+    - Marcelino
+    - Belen
+    - Milagros
+    - Rodrigo
+    - Jazmin
+    - Gaston
+    - Josefina
+    - Nicanor
+    - Noelia
+    - Teodoro
+    - Osvaldo
+    - Pamela
+    - Mauricio
+    - Catalina
+    - Esteban
+    - Nestor
+    - Florentina
+    - Tatiana
+    - Ruben
+    - Camila
+    - Claudio
+    - Valentina
+    - Enrique
+    - Melina
+    - Marcos
+    - Candela
+    - Renzo
+    - Malena
+    - Dario
+    - Luciana
+    - Patricio
+    - Octavio
+    - Milena
+    - Fabian
+    - Julieta
+    - Jimena
+    - Lautaro
+    - Fiorella
+    - Mariano
+    - Lucila
+    - Bruno
+    - Axel
+    - Micaela
+    - Lucrecia
+    - Santiago
+    - Marisa
+    - Ezequiel
+    - Antonella
+    - Leonel
+    - Nicolas
+    - Celestina
+    - Franco
+    - Ivan
+    - Constanza
+    - Leonardo
+    - Priscila
+    - Andres
+    - Lara
+    - Walter
+    - Sebastian
+    - Lucas
+    - Melisa
+    - Emiliano
+    - German
+    - Lucio
+    - Fabricio
+    - Daniela
+    - Simon
+    - Nahuel
+
+regex:
+  - ^[1-9]$
+  - ^[1-4][0-9]$
+  - \b50\b
+
+
+
+entities:
+- genero
+- nombre
+- numero
+- nombre_libro
+
+#SLOTS DE ENTITIES
+
+
+
+slots:
+  genero:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: genero
+
+  nombre:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nombre
+
+  numero:
+    type: float
+    initial_value: 1
+    mappings:
+    - type: from_entity
+      entity: numero
+
+# SLOTS PARA LOS DATOS DE PROLOG
+
+  nombre_libro:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nombre_libro
+
+    
+
+responses:
+  utter_greet:
+  - text: "hola, que se te ofrece?"
+  - text: "hola, en que puedo ayudarte?"
+  - text: "hola, que tipo de libro busca?"
+  - text: "hola, como puedo ayudarlo?"
+  - text: "hola, que tipo de libros le gusta?"
+
+
+  utter_saludo_nombre:
+  - text: "hola, que se te ofrece {nombre}?"
+  - text: "hola, en que puedo ayudarte {nombre}?"
+  - text: "hola, como puedo ayudarlo {nombre}?"
+  - text: "hola, que tipo de libros le gusta {nombre}?"
+
+
+
+  utter_confirma_posicion:
+  - text: "diga la posicion del libro que quiere consultar"
+
+  utter_pedir_que_buscar:
+  - text: "que quiere saber de este libro"
+
+  
+  utter_genero:
+  - text: "el genero que busca es {genero}?"
+
+  utter_goodbye:
+  - text: "chau"
+  - text: "adios"
+
+  utter_niego_genero:
+  - text: "no he reconocido el genero"
+  - text: "vuelva a consultar"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
