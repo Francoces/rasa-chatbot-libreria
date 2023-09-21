@@ -1,0 +1,26 @@
+[
+  {
+    "name": "numero",
+    "pattern": "\\b50\\b"
+  },
+  {
+    "name": "numero",
+    "pattern": "^[1-4][0-9]$"
+  },
+  {
+    "name": "numero",
+    "pattern": "^[1-9]$"
+  },
+  {
+    "name": "nombre_libro",
+    "pattern": "(\\bEl\\ senior\\ de\\ los\\ anillos\\b|\\bDracula\\b|\\bEl\\ Hobbit\\b|\\bEl\\ silencio\\ de\\ los\\ corderos\\b|\\bIt\\b|\\bHarry\\ Potter\\ y\\ la\\ piedra\\ filosofal\\b|\\bEl\\ codigo\\ Da\\ Vinci\\b|\\bLos\\ pilares\\ de\\ la\\ Tierra\\b|\\bOrgullo\\ y\\ prejuicio\\b|\\bEl\\ resplandor\\b|\\bLas\\ cronicas\\ de\\ Narnia:\\ El\\ leon,\\ la\\ bruja\\ y\\ el\\ armario\\b|\\bSherlock\\ Holmes:\\ Aventuras\\b|\\bLa\\ sombra\\ del\\ viento\\b|\\bEn\\ llamas\\b|\\bOrgullo\\ y\\ prejuicio\\b|\\bLos\\ miserables\\b|\\bDon\\ Quijote\\ de\\ la\\ Mancha\\b|\\bCrimen\\ y\\ castigo\\b|\\bLas\\ aventuras\\ de\\ Huckleberry\\ Finn\\b|\\bLa\\ riqueza\\ de\\ las\\ naciones\\b|\\bEl\\ arte\\ de\\ amar\\b|\\bLa\\ cocina\\ al\\ desnudo\\b|\\bLa\\ Biblia\\b|\\bHojarasca\\b)"
+  },
+  {
+    "name": "genero",
+    "pattern": "(\\bFiccion\\b|\\bCiencia\\b|\\bciencia\\ ficcion\\b|\\bFantasia\\b|\\bHistoria\\b|\\bSuspenso\\b|\\bTerror\\b|\\bRomance\\b|\\bAventura\\b|\\bPoesia\\b|\\bCuento\\b|\\bEnsayo\\b|\\bDrama\\b|\\bComedia\\b|\\bMisterio\\b|\\bPolitica\\b|\\bFilosofia\\b|\\bViajes\\b|\\bMitologia\\b|\\bMagia\\b|\\bCrecimiento\\b|\\bAutoayuda\\b|\\bBiografia\\b|\\bDiario\\b|\\bTeatro\\b|\\bComics\\b|\\bAnimales\\b|\\bNegocios\\b|\\bEducacion\\b|\\bMeditacion\\b|\\bEspiritualidad\\b|\\bReligion\\b|\\bFeminismo\\b|\\bPsicologia\\b|\\bArtes\\b|\\bFotografia\\b|\\bArquitectura\\b|\\bDeporte\\b|\\bCocina\\b|\\bManualidades\\b|\\bNaturaleza\\b|\\bMisterio\\b|\\bTecnologia\\b|\\bSuspenso\\b|\\bThriller\\ psicologico\\b|\\bPoliciaca\\b|\\bLiteratura\\ clasica\\b|\\bLiteratura\\ infantil\\b|\\bPoesia\\b|\\bCiencia\\ y\\ tecnologia\\b|\\bEconomia\\b|\\bSociologia\\b|\\bAntropologia\\b|\\bCritica\\ literaria\\b|\\bPeriodismo\\b|\\bGuerra\\b|\\bEspionaje\\b|\\bConspiraciones\\b|\\bAprendizaje\\b|\\bTerror\\ psicologico\\b|\\bTerror\\ sobrenatural\\b|\\bTerror\\ splatter\\b|\\bHumor\\b|\\bDetectives\\b|\\bSuperheroes\\b|\\bsobrenatural\\b)"
+  },
+  {
+    "name": "nombre",
+    "pattern": "(\\bJuan\\b|\\bMaria\\b|\\bCarlos\\b|\\bLaura\\b|\\bAlejandro\\b|\\bAna\\b|\\bJorge\\b|\\bPatricia\\b|\\bRoberto\\b|\\bGabriela\\b|\\bFernando\\b|\\bSilvia\\b|\\bManuel\\b|\\bNatalia\\b|\\bOscar\\b|\\bCecilia\\b|\\bLuis\\b|\\bCarolina\\b|\\bSergio\\b|\\bMarina\\b|\\bDaniel\\b|\\bVictoria\\b|\\bJavier\\b|\\bPaula\\b|\\bEduardo\\b|\\bVeronica\\b|\\bRamon\\b|\\bAdriana\\b|\\bPablo\\b|\\bValeria\\b|\\bHector\\b|\\bAndrea\\b|\\bMartin\\b|\\bLorena\\b|\\bIgnacio\\b|\\bRosario\\b|\\bMarcelo\\b|\\bGuadalupe\\b|\\bVirginia\\b|\\bAriel\\b|\\bMercedes\\b|\\bMiguel\\b|\\bFlorencia\\b|\\bGonzalo\\b|\\bRomina\\b|\\bMatias\\b|\\bAntonela\\b|\\bGuillermo\\b|\\bEmilio\\b|\\bAgustina\\b|\\bRicardo\\b|\\bCeleste\\b|\\bDiego\\b|\\bPedro\\b|\\bBrenda\\b|\\bFederico\\b|\\bBeatriz\\b|\\bJulian\\b|\\bMariana\\b|\\bLeandro\\b|\\bRafael\\b|\\bLourdes\\b|\\bFacundo\\b|\\bAilen\\b|\\bErnesto\\b|\\bDaiana\\b|\\bMarcelino\\b|\\bBelen\\b|\\bMilagros\\b|\\bRodrigo\\b|\\bJazmin\\b|\\bGaston\\b|\\bJosefina\\b|\\bNicanor\\b|\\bNoelia\\b|\\bTeodoro\\b|\\bOsvaldo\\b|\\bPamela\\b|\\bMauricio\\b|\\bCatalina\\b|\\bEsteban\\b|\\bNestor\\b|\\bFlorentina\\b|\\bTatiana\\b|\\bRuben\\b|\\bCamila\\b|\\bClaudio\\b|\\bValentina\\b|\\bEnrique\\b|\\bMelina\\b|\\bMarcos\\b|\\bCandela\\b|\\bRenzo\\b|\\bMalena\\b|\\bDario\\b|\\bLuciana\\b|\\bPatricio\\b|\\bOctavio\\b|\\bMilena\\b|\\bFabian\\b|\\bJulieta\\b|\\bJimena\\b|\\bLautaro\\b|\\bFiorella\\b|\\bMariano\\b|\\bLucila\\b|\\bBruno\\b|\\bAxel\\b|\\bMicaela\\b|\\bLucrecia\\b|\\bSantiago\\b|\\bMarisa\\b|\\bEzequiel\\b|\\bAntonella\\b|\\bLeonel\\b|\\bNicolas\\b|\\bCelestina\\b|\\bFranco\\b|\\bIvan\\b|\\bConstanza\\b|\\bLeonardo\\b|\\bPriscila\\b|\\bAndres\\b|\\bLara\\b|\\bWalter\\b|\\bSebastian\\b|\\bLucas\\b|\\bMelisa\\b|\\bEmiliano\\b|\\bGerman\\b|\\bLucio\\b|\\bFabricio\\b|\\bDaniela\\b|\\bSimon\\b|\\bNahuel\\b)"
+  }
+]

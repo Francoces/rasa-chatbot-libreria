@@ -10,7 +10,7 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-from swiplserver import progolMQI  
+from swiplserver import prologmqi
 #from pyswip import Prolog   # instalar    pip install pyswip
 
 tengo_un_libro = False
@@ -67,7 +67,7 @@ class ListarPorGenero(Action):
         tengo_un_libro = False #si piden otra vez regresa a null
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
             
                 genero = tracker.get_slot("genero")
                 genero = genero.capitalize()
@@ -100,7 +100,7 @@ class VerSiExisteElLibro(Action):
 
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
             
                 titulo = tracker.get_slot("nombre_libro")
                 titulo = titulo.capitalize()
@@ -136,7 +136,7 @@ class ImprimirTodosLosLibros(Action):
         tengo_un_libro = False #si piden otra vez regresa a null
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
             
 
 
@@ -166,7 +166,7 @@ class BuscarAutorLibro(Action):
 
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
 
                 if tengo_un_libro == True:
                     titulo = tracker.get_slot("nombre_libro")
@@ -196,7 +196,7 @@ class DarLaSinopsisDelLibro(Action):
 
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
 
                 if tengo_un_libro == True:
                     titulo = tracker.get_slot("nombre_libro")
@@ -226,7 +226,7 @@ class DarCantPaginasLibro(Action):
 
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
 
         
                 if tengo_un_libro == True:
@@ -258,7 +258,7 @@ class DarPrecioDelLibro(Action):
         
         with PrologMQI(port=8000) as mqi:
             with mqi.create_thread() as prolog_thread:
-                prolog_thread.query("consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
+                prolog_thread.query(r"consult('D:\Users\Usuario\Documents\Prolog\libreria.pl')")
 
         
                 if tengo_un_libro == True:
