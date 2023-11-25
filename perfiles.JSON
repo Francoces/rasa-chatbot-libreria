@@ -1,0 +1,10 @@
+[
+    {
+        "Nombre": "Franco",
+        "edad": 21,
+        "libros_largos": true,
+        "Generos": [
+            "'Economia'"
+        ]
+    }
+]

@@ -1,0 +1,119 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: preguntar por la lista
+  steps:
+  - intent: Consultar_lista
+  - action: mostrar_lista
+  - action: utter_confirma_posicion
+  - intent: preguntar_posicion
+  - action: pregunta_la_posicion
+
+
+
+- story: saludo nombre
+  steps:
+  - intent: saludo_con_nombre
+  - action: utter_saludo_nombre
+  - action: Pedir_Perfil
+
+#//////////////////PREGUNTA POR GENERO /////////////////////////////////////
+- story: preguntar genero
+  steps:
+  - intent: busqueda_genero_libro
+  - action: utter_genero
+  - intent: affirm
+  - action: listar_por_genero # mostrar lista de libros de ese genero
+  - action: utter_confirma_posicion
+  - intent: preguntar_posicion
+  - action: pregunta_la_posicion
+  
+
+
+#///////////////////////////////TODOS LO LIBROS/////////////////////////////////////
+
+- story: preguntar todos los libros 
+  steps:
+  - intent: dar_todos_los_libros
+  - action: imprimir_todos_los_libros #lista todos los libros
+  - action: utter_confirma_posicion
+  - intent: preguntar_posicion
+  - action: pregunta_la_posicion
+  
+
+#////////////////////////////// CON TITULO  /////////////////////////////////////
+
+- story: preguntar  libro por nombre
+  steps:
+  - intent: preguntar_libro_por_nombre # en caso de no existir le dice que ingrese otro libro o haga otra consulta 
+  - action: ver_si_existe_el_libro
+  - action: utter_pedir_que_buscar
+  
+
+
+#############################################
+###############     CON POSICION      ################
+- story: preguntar de que trata el libro
+  steps:
+  - intent: preguntar_sinopsis
+  - action: dar_la_sinopsis_del_libro  #das un titulo y devuelve su sinopsis
+
+- story: preguntar autor del libro
+  steps:
+  - intent: preguntar_autor
+  - action: buscar_autor_libro #das un titulo y devuelve su autor
+
+- story: preguntar cantidad de paginas del libro
+  steps:
+  - intent: preguntar_cant_paginas
+  - action: dar_cant_paginas_libro #das un titulo y devuelve su cant de paginas
+
+
+- story: preguntar precio de libro
+  steps:
+  - intent: preguntar_precio
+  - action: dar_precio_del_libro #das un titulo y devuelve su precio
+
+
+
+
+- story: quiero hacer un perfil 1
+  steps:
+  - intent: Quiero_hacer_un_perfil
+  - action: utter_diga_edad
+  - intent: decir_edad
+  - action: utter_leer_libros_largos
+  - intent: affirm
+  - action: obtener_datos
+  - action: utter_terminar_recoleccion_de_datos
+
+
+- story: quiero hacer un perfil 2
+  steps:
+  - intent: Quiero_hacer_un_perfil
+  - action: utter_diga_edad
+  - intent: decir_edad
+  - action: utter_leer_libros_largos
+  - intent: deny
+  - action: obtener_datos
+  - action: utter_terminar_recoleccion_de_datos
+
+
+
+- story: ver datos del perfil
+  steps:
+  - intent: devolver_datos_de_perfil
+  - action: mostrar_perfil
+
+
+- story: recomendando libro
+  steps:
+  - intent: recomendar_libro
+  - action: Pedir_Sugerencia
