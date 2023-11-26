@@ -500,7 +500,7 @@ class VerSiExisteElLibro(Action):
                 titulo = titulo.capitalize()
                 titulo = "'" + titulo + "'"
 
-                result = prolog_thread.query("existe_libro({titulo})")
+                result = prolog_thread.query(f"existe_libro({titulo})")
                 global tengo_un_libro
                 global lista_de_libros
                 lista_de_libros.clear()
