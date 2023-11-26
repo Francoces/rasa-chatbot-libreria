@@ -168,11 +168,11 @@ nlu:
 
 - intent: decir_edad
   examples: |
-    - tengo[18]() anios
-    - tengo [20]()
-    - mi edad es [80]()
-    - cumpli [43]() anios
-    - ya tengo [50]() anios
+    - tengo[18](edad) anios
+    - tengo [20](edad)
+    - mi edad es [80](edad)
+    - cumpli [43](edad) anios
+    - ya tengo [50](edad) anios
 
 
 - intent: devolver_datos_de_perfil
