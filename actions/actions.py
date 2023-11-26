@@ -668,7 +668,7 @@ class DarPrecioDelLibro(Action):
 
                     if result:
                         precio = result[0]["Precio"]
-                        dispatcher.utter_message(text=f"'{titulo}' cuesta {precio}")
+                        dispatcher.utter_message(text=f"'{titulo}' cuesta ${precio}")
                     else:
                         dispatcher.utter_message(text=f"No se encontro informacion para el titulo.")
                 else:
