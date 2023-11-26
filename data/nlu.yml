@@ -99,7 +99,7 @@ nlu:
   examples: |
     - quiero ver el libro de la posicion [6](numero) 
     - quiero ver el [6](numero) 
-    - mostrame el [3](numero) 
+    - muestrame el [3](numero) 
     - muestrame el numero [20](numero)
     - a ver el [4](numero)
     - [4](numero)
